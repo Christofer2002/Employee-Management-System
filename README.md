@@ -37,7 +37,7 @@ Make sure you have the following components installed before you begin:
 1. Clone the repository
 
 ```bash
-git clone https://github.com/YourUsername/Employee-Management-System.git
+git clone https://github.com/Christofer2002/Employee-Management-System.git
 cd BackendEmployeeManagementSystem
 ```
 
