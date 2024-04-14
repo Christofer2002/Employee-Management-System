@@ -66,6 +66,7 @@ npm install
 ```
 
 3. Configure Backend URL
+
 Update the backend URL in the src/config.js file according to where the backend is running.
 
 4. Run the application
