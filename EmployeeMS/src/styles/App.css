@@ -24,3 +24,43 @@ strong{
 button{
   font-size: 1.3rem;
 }
+
+/* Botones */
+.btn {
+  transition: background-color var(--animation-duration), border-color var(--animation-duration), color var(--animation-duration) !important;
+}
+
+.btn-success {
+  background-color: var(--button-background) !important;
+  color: var(--button-color) !important;
+  border: 2px solid var(--button-border-color) !important;
+}
+
+.btn-success:hover {
+  background-color: var(--button-background-hover) !important;
+  border-color: var(--button-background-hover) !important;
+}
+
+.btn-success:active {
+  background-color: var(--button-background-active) !important;
+  border-color: var(--button-background-active) !important;
+}
+
+.btn-success:focus {
+  box-shadow: 0 0 10px var(--input-focus-box-shadow) !important;
+}
+
+.custom-input {
+  border: 2px solid var(--input-border-color) !important;
+  transition: border-color var(--animation-duration), box-shadow var(--animation-duration), background-color var(--animation-duration) !important;
+  background-color: var(--input-background) !important;
+  border-radius: 5px !important;
+  padding: 0.75rem 1rem !important;
+  font-size: 1rem !important;
+}
+
+.custom-input:focus {
+  border-color: var(--input-focus-border-color) !important;
+  box-shadow: 0 0 10px var(--input-focus-box-shadow) !important;
+  background-color: var(--input-background-focus) !important;
+}

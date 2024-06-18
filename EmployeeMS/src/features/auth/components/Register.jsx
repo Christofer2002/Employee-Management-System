@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faLock, faEye, faEyeSlash, faUser } from '@fortawesome/free-solid-svg-icons';
-import '../styles/Register.css';
+import '/src/features/auth/styles/Register.css';
 
 const Register = () => {
     const [passwordVisible, setPasswordVisible] = useState(false);
@@ -19,22 +19,22 @@ const Register = () => {
 
     return (
         <div className='d-flex justify-content-center align-items-center vh-100 registerPage'>
-            <div className='p-3 rounded w-25 border registerForm'>
-                <h2 className='d-flex justify-content-center text-center'>Register</h2>
+            <div className='rounded w-25 border registerForm'>
+                <h2 className='d-flex justify-content-center text-center'>Register Account</h2>
                 <form>
                     <div className='mb-3'>
                         <label htmlFor="username" className='d-flex align-items-center'>
                             <FontAwesomeIcon icon={faUser} className='me-2' />
                             <strong>Username:</strong>
                         </label>
-                        <input type="text" name='username' placeholder='Enter Username' className='form-control rounded-0' />
+                        <input type="text" name='username' placeholder='Enter Username' className='form-control rounded-0 custom-input' />
                     </div>
                     <div className='mb-3'>
                         <label htmlFor="email" className='d-flex align-items-center'>
                             <FontAwesomeIcon icon={faEnvelope} className='me-2' />
                             <strong>Email:</strong>
                         </label>
-                        <input type="email" name='email' autoComplete='on' placeholder='Enter Email' className='form-control rounded-0' />
+                        <input type="email" name='email' autoComplete='on' placeholder='Enter Email' className='form-control rounded-0 custom-input' />
                     </div>
                     <div className='mb-3 position-relative'>
                         <label htmlFor="password" className='d-flex align-items-center'>
@@ -46,7 +46,7 @@ const Register = () => {
                                 type={passwordVisible ? 'text' : 'password'}
                                 name='password'
                                 placeholder='Enter Password'
-                                className='form-control rounded-0'
+                                className='form-control rounded-0 custom-input'
                             />
                             <span
                                 className='input-group-text'
@@ -62,12 +62,12 @@ const Register = () => {
                             <FontAwesomeIcon icon={faLock} className='me-2' />
                             <strong>Confirm Password:</strong>
                         </label>
-                        <div className="input-group">
+                        <div className="input-group mb-4">
                             <input
                                 type={confirmPasswordVisible ? 'text' : 'password'}
                                 name='confirmPassword'
                                 placeholder='Confirm Password'
-                                className='form-control rounded-0'
+                                className='form-control rounded-0 custom-input'
                             />
                             <span
                                 className='input-group-text'
@@ -78,10 +78,14 @@ const Register = () => {
                             </span>
                         </div>
                     </div>
-                    <button className='btn btn-success w-100 rounded-0 mb-4'>Register</button>
+                    <button className='btn btn-success w-100 rounded-0 mb-2'>Register</button>
+                    <div className='mb-3 d-flex gap-2'>
+                        <input type="checkbox" name="tick" id='tick' />
+                        <label htmlFor="password">You are Agree with terms & conditions</label>
+                    </div>
                     <div className='text-center'>
                         <span>Do you have an account? </span>
-                        <Link to="/login">Sign In</Link>
+                        <Link to="/">Sign In</Link>
                     </div>
                 </form>
             </div>

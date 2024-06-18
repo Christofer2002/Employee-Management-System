@@ -1,0 +1,97 @@
+:root {
+    --blanco: #ffffff;
+    --input-border-color: #ced4da;
+    --input-focus-border-color: #80bdff;
+    --input-focus-box-shadow: rgba(0, 123, 255, 0.25);
+    --animation-duration: 0.3s;
+    --input-background: rgba(255, 255, 255, 0.8);
+  }
+
+.registerPage{
+    background: url("/img/backgroundLogin.jpg");
+    background: linear-gradient(rgb(11, 11, 11, 0.5), rgb(10, 10, 10, 0.5)), url("/img/backgroundLogin.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation: moveBackground 30s linear infinite alternate;
+}
+
+@keyframes moveBackground {
+    0% {
+        background-position: center top;
+    }
+    100% {
+        background-position: center bottom;
+    }
+}
+
+.registerForm{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(11, 25, 56, 0.6);
+    color: var(--blanco);
+    gap: 1.5rem;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeIn var(--animation-duration) ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.custom-input {
+    border: 1px solid var(--input-border-color);
+    transition: border-color var(--animation-duration), box-shadow var(--animation-duration), background-color var(--animation-duration);
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+.custom-input:focus {
+    border-color: var(--input-focus-border-color);
+    box-shadow: 0 0 5px var(--input-focus-box-shadow);
+    background-color: var(--input-background);
+    animation: inputFocus var(--animation-duration) ease-in-out;
+}
+
+@keyframes inputFocus {
+    from {
+        background-color: rgba(255, 255, 255, 0.6);
+    }
+    to {
+        background-color: var(--input-background);
+    }
+}
+
+/* Posicionamiento del icono de visibilidad de la contraseña */
+.position-relative {
+    position: relative;
+}
+
+.position-absolute {
+    position: absolute;
+}
+
+.top-50 {
+    top: 50%;
+}
+
+.end-0 {
+    right: 0;
+}
+
+.translate-middle-y {
+    transform: translateY(-50%);
+}
+
+.input-group-text:hover {
+    background-color: grey;
+    color: var(--input-focus-border-color);
+}
